@@ -1,0 +1,17 @@
+name: bon-archiver
+version: '0.1'
+summary: Bon Archiver
+description: A tool for compressing and extracting files.
+
+base: core18
+confinement: strict
+
+parts:
+  bon-archiver:
+    plugin: python
+    python-version: python3
+    source: .
+
+apps:
+  bon-archiver:
+    command: python3 $SNAP/bin/bon-archiver/archiver.py
